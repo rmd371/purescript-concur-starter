@@ -12,7 +12,8 @@ import Effect (Effect)
 hello :: forall a. Widget HTML a
 hello = do
   void $ D.button [P.onClick] [D.text "Say Hello"]
-  D.text "Hello Sailor!"
+  void $ D.button [P.onClick] [D.text "Say Hello Again"]
+  D.text "Hello World!"
 
 main :: Effect Unit
 main = runWidgetInDom "root" hello
