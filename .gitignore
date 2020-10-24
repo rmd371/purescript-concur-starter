@@ -10,3 +10,5 @@ html/index.js
 /.cache
 /dist
 /.spago
+closure-compiler/*
+/.psc-ide-port

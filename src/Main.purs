@@ -8,6 +8,8 @@ import Concur.React.DOM as D
 import Concur.React.Props as P
 import Concur.React.Run (runWidgetInDom)
 import Effect (Effect)
+import TotalCounter (totalCounter)
+import Hello (helloWidget)
 
 hello :: forall a. Widget HTML a
 hello = do
@@ -16,4 +18,7 @@ hello = do
   D.text "Hello World!"
 
 main :: Effect Unit
-main = runWidgetInDom "root" hello
+--main = runWidgetInDom "root" helloWidget
+main = runWidgetInDom "root" totalCounter
+
+data View = View Int HTML
